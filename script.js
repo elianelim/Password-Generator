@@ -41,15 +41,36 @@ function generatePassword() {
   characterGeneratorList.push(upperCase);
  }
  
+ //the length of password that the user has input
  var pickerIndex = 0
 
+//to randomize and pull one index from the array to generate password
  for (var i = 0; i < options.length; ++i) {
   var characterGenerator = characterGeneratorList[pickerIndex];
   var randomIndex = Math.floor(Math.random() * characterGenerator.length);
   generatedPW += generatedCharacter;
   pickerIndex += 1;
   if (pickerIndex >= characterGeneratorList.length) {
-    //this will tell the program to go back to index 0
+    //this will tell the program to go back to index 0 instead of going on infinite
     pickerIndex = 0;
   }
  }
+//  return generatedPW; //HOW ABOUT THIS!!!
+
+ //password to gather user info for password criteria
+ function passwordCriteria() {
+  var passwordLength = parseInt(prompt("Input a password length from 8-128 characters."));
+  console.log(typeof passwordLength);
+ 
+
+ if (passwordLength < 8 || passwordLength >128){
+  alert ("Re-enter a NUMBER greater than 8 and no more than 128");
+  return null;
+ }
+
+ if (Number.isNaN(passwordLength)) {
+  alert ("Re-enter a NUMBER greater than 8 and no more than 128");
+  return null;
+ }
+
+}
