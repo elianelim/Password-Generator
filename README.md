@@ -12,9 +12,9 @@ This is a very challenging project for me as I was struggling to understand the 
 
 ## Links
 
-[Link to my Portfolio webpage]()
+[Link to my Portfolio webpage](https://elianelim.github.io/Password-Generator/)
 
-[Link to Repositiory]()
+[Link to Repositiory](https://github.com/elianelim/Password-Generator.git)
 
 
 ## Credits
@@ -22,4 +22,3 @@ This is a very challenging project for me as I was struggling to understand the 
 Instructor
 Teacher's Assistant
 1:1 tutoring
-Extra coding lessons (external)
