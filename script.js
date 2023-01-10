@@ -24,6 +24,7 @@ function generatePassword() {
   console.log(options); //to see what the user has chosen for their password choices
   generatedPW = ""; //empty string
 
+  //if options return null, it will not generate the password
   if (options != null) {
     var characterGeneratorList = [];
 
@@ -41,12 +42,13 @@ function generatePassword() {
     }
 
     //the length of password that the user has input
-    var pickerIndex = 0
+    var pickerIndex = 0;
 
     //to randomize and pull one index from the array to generate password
-    for (var i = 0; i < options.length; ++i) {
+    for (var i = 0; i < options.passwordLength; ++i) {
       var characterGenerator = characterGeneratorList[pickerIndex];
       var randomIndex = Math.floor(Math.random() * characterGenerator.length);
+      var generatedCharacter = characterGenerator[randomIndex];
       generatedPW += generatedCharacter;
       pickerIndex += 1;
 
