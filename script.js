@@ -18,3 +18,27 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;//for input in html elements (eg. input, textarea, select)
 }
+// to generate the password randomly and return the random generated password
+function generatePassword() {
+  var options = passwordCriteria();
+  console.log(options); //to see what the user has chosen for their password choices
+  generatedPW = ""; //empty string
+}
+ if (options != null) {
+  var characterGeneratorList = [];
+ }
+
+ if (options.isNumeric) {
+  characterGeneratorList.push(numeric);
+ }
+ if (options.isSpecial) {
+  characterGeneratorList.push(specialChar);
+ }
+ if (options.isLowerCase) {
+  characterGeneratorList.push(lowerCase);
+ }
+ if (options.isUpperCase) {
+  characterGeneratorList.push(upperCase);
+ }
+ 
+ var pickerIndex = 0
