@@ -42,3 +42,14 @@ function generatePassword() {
  }
  
  var pickerIndex = 0
+
+ for (var i = 0; i < options.length; ++i) {
+  var characterGenerator = characterGeneratorList[pickerIndex];
+  var randomIndex = Math.floor(Math.random() * characterGenerator.length);
+  generatedPW += generatedCharacter;
+  pickerIndex += 1;
+  if (pickerIndex >= characterGeneratorList.length) {
+    //this will tell the program to go back to index 0
+    pickerIndex = 0;
+  }
+ }
